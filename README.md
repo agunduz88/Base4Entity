@@ -13,5 +13,11 @@ Base4 Entity is a winforms Search & CRUD framework that works with entity framew
 I have used & override metroframework controls because I just loved the visuals:) 
 you could however use the original winforms by inheriting the base4controls however you will need to customize textbox with button that comes with metroframework. 
 
+Setup: Import the following .dll files into your program
 
+- Base4Controls.dll
+- Base4Entity.dll
+- MetroFramework.Design.dll
+- MetroFramework.Fonts.dll
 
+Tutorial: Coming Soon
