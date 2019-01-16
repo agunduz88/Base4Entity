@@ -95,6 +95,7 @@ To start with following is the list of things to kno before we go any further on
    **LogDescription Usage:**
    
   /* We will have a language selection combobox on users table, when we change the user language it will store L_DESC value to the         New/old values field. if not used it will store L_CODE Value. */
+  
    ![alt text](https://github.com/agunduz88/Base4Entity/blob/master/Tutorial%20Images/Base4LogDescription.png)
  
   
