@@ -1,7 +1,6 @@
 # Base4Entity
 
-Nuget:
-Install-Package Base4Entity
+Nuget: **Install-Package Base4Entity**
 
 What is Base4Entity?
 
