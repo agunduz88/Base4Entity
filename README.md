@@ -38,13 +38,13 @@ To start with following is the list of things to kno before we go any further on
    - Base4Browse (this form is used to search records on a table, create/update/delete are done over the BrowseForm to be more precise when we click on the New/edit/ button on the browse form it opens a CRUD form, I'll briefly explain how things operate later in the tutorial.)
    
 2- The Framework automatically embeds the following tables into your database in order to be able to keep the changes made on the records. 
-- ACTIONS (keeps the list of the states that a record can be: insert/deleteupdate) MUST
-- LANGUAGES (keeps the list of the languages that the software will support) MUST
-- CODE_YESNO ( keeps yes/no/null)  MUST
-- STYLES (keeps styles list so that the software will operate depending on useres preference) OPTIONAL
-- TRANS_CODES AND TRANS_AUTHORIZATION ( keeps autorization information whom which users have access on what part of the program) OPTIONAL
-- CHANGE_LOG (changes made in entities are stored here) MUST
-- USERS   users table is designed to keep the following information
+**- ACTIONS** (keeps the list of the states that a record can be: insert/deleteupdate) MUST
+**- LANGUAGES** (keeps the list of the languages that the software will support) MUST
+**- CODE_YESNO** ( keeps yes/no/null)  MUST
+**- STYLES** (keeps styles list so that the software will operate depending on useres preference) OPTIONAL
+**- TRANS_CODES AND TRANS_AUTHORIZATION** ( keeps autorization information whom which users have access on what part of the program) OPTIONAL
+**- CHANGE_LOG** (changes made in entities are stored here) MUST
+**- USERS**   users table is designed to keep the following information
   a) Username
   b) User Password 
   c) User is Admin or not
@@ -53,43 +53,32 @@ To start with following is the list of things to kno before we go any further on
   d) Authorization
 
   below are the list of tables that are autofilled when embeded
-  ACTIONS filled with insert/update/delete 
-  LANGUAGES English language is added by default
-  USERS an admin user is created username:admin password sysdba (which can be changed later) 
+  **ACTIONS** filled with insert/update/delete 
+  **LANGUAGES** English language is added by default
+  **USERS** an admin user is created username:admin password sysdba (which can be changed later) 
   
 3- Framework Attributes there are two attributes that comes with the framework
-  a) [Base4IgnoreAudit]   by default the framework keeps records of changes made on every table unless you add the ignoreaudit attribute
-  b) [Base4LogDescription] When tracking the changes if the change is made on a combobox it stores the valuemember on the new/old value   field on the CHANGE_LOGS table, to be able to store the display member we add the LogDescription attribute on the description           property. 
+  a) **[Base4IgnoreAudit]**   by default the framework keeps records of changes made on every table unless you add the ignoreaudit attribute
+  b) **[Base4LogDescription]** When tracking the changes if the change is made on a combobox it stores the valuemember on the new/old value   field on the CHANGE_LOGS table, to be able to store the display member we add the LogDescription attribute on the description           property. 
   
  Below are sample usages:
  
-  IgnoreAudit Usage: 
-  
-  [Base4LogDescription]   /* When added will not keep record of any created or updated records on the language class */
-  public class LANGUAGES 
-    {
-        [Key]
-        public string L_CODE { get; set; }
-        public string L_DESC { get; set; }
-    }
+  **IgnoreAudit Usage:** 
+  /* When added will not keep record of any created or updated records on the language class */
+   ![alt text](https://github.com/agunduz88/Base4Entity/blob/master/Tutorial%20Images/ignoreAudit.png)
    
-   LogDescription Usage:
- public class LANGUAGES 
- {
-     [Key]
-    public string L_CODE { get; set; }
-
-   [Base4LogDescription]    /* We will have a language selection combobox on users table, when we change the user language it will
+   **LogDescription Usage:**
+   
+    /* We will have a language selection combobox on users table, when we change the user language it will
                              store L_DESC value to the New/old values field. if not used it will store L_CODE Value. */
-   public string L_DESC { get; set; }
-       
-  }
+   ![alt text](https://github.com/agunduz88/Base4Entity/blob/master/Tutorial%20Images/Base4LogDescription.png)
+ 
   
  Now that the "Things to Know" part is over, we can start with the tutorial
  
- If you are at this point of the tutorial Entity Framework and Base4Entity Should be installed. 
+**If you are at this point of the tutorial Entity Framework and Base4Entity Should be installed.** 
  
- 1- Go to your DBContext and edit it accordingly. 
+ **1- Go to your DBContext and edit it accordingly.** 
  - The context file inherits from DbContext as you will notice from the attached image, we will change it to Base4Context
  When done it will embed the 8 tables I've mentioned above.
  
@@ -100,4 +89,4 @@ To start with following is the list of things to kno before we go any further on
  
  ![alt text](https://github.com/agunduz88/Base4Entity/blob/master/Tutorial%20Images/DbContext.png)
  
- 1-)When we create a new Winforms project it comes with a default Form named Form1
+ **2-)When we create a new Winforms project it comes with a default Form named Form1**
