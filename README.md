@@ -74,16 +74,16 @@ To start with following is the list of things to kno before we go any further on
     }
    
    LogDescription Usage:
-   
-   public class LANGUAGES 
-    {
-        [Key]
-        public string L_CODE { get; set; }
+ public class LANGUAGES 
+ {
+     [Key]
+    public string L_CODE { get; set; }
 
-        [Base4LogDescription]    /* We will have a language selection combobox on users table, when we change the user language it will
-        store L_DESC value to the New/old values field. if not used it will store L_CODE Value. */
-        public string L_DESC { get; set; }
-    }
+   [Base4LogDescription]    /* We will have a language selection combobox on users table, when we change the user language it will
+                             store L_DESC value to the New/old values field. if not used it will store L_CODE Value. */
+   public string L_DESC { get; set; }
+       
+  }
   
  Now that the "Things to Know" part is over, we can start with the tutorial
  
