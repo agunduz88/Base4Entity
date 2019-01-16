@@ -35,7 +35,8 @@ and add **Base4ConfigurationFile.cs** to your solution folder.
 
 **Configuration:**
 
-1- go to Base4ConfigurationFile.cs and change it accordingly, I've provided you some free Icons I've found on the internet, ofcourse you can use your own icons..
+1- go to Base4ConfigurationFile.cs and change it accordingly, I've provided you some free Icons I've found on the internet,
+located on Tutorial Icons folder, add them to your Resource.resx to be able to use them ofcourse you can use your own icons..
 
     class Base4ConfigurationFile: IBase4Configuration
     {
